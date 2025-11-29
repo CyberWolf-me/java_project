@@ -20,7 +20,7 @@ if (-not (Test-Path "$JAVAFX_PATH\lib")) {
 }
 
 Write-Host "Compiling Color Hunt Game..." -ForegroundColor Green
-javac --module-path "$JAVAFX_PATH\lib" --add-modules javafx.controls -d out src\main\java\com\colorhunt\*.java
+javac --module-path "$JAVAFX_PATH\lib" --add-modules javafx.controls -d out src\main\java\com\colorhunt\*.java src\main\java\com\colorhunt\model\*.java src\main\java\com\colorhunt\view\*.java src\main\java\com\colorhunt\controller\*.java src\main\java\com\colorhunt\util\*.java
 
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Compilation failed! Please check your JavaFX path." -ForegroundColor Red

@@ -8,7 +8,7 @@ set JAVAFX_PATH=D:\java\java_project\javafx-sdk-25.0.1
 set MAIN_CLASS=com.colorhunt.ColorHuntGame
 
 echo Compiling Color Hunt Game...
-javac --module-path %JAVAFX_PATH%\lib --add-modules javafx.controls -d out src\main\java\com\colorhunt\*.java
+javac --module-path %JAVAFX_PATH%\lib --add-modules javafx.controls -d out src\main\java\com\colorhunt\*.java src\main\java\com\colorhunt\model\*.java src\main\java\com\colorhunt\view\*.java src\main\java\com\colorhunt\controller\*.java src\main\java\com\colorhunt\util\*.java
 
 if %ERRORLEVEL% NEQ 0 (
     echo Compilation failed! Please check your JavaFX path.
